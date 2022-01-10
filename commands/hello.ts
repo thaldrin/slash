@@ -5,12 +5,13 @@ export default class HelloCommand extends SlashCommand {
     super(creator, {
       name: 'hello',
       description: 'Says hello to you.',
+      guildIDs: ['828978320279863306'],
       options: [
         {
           type: CommandOptionType.STRING,
           name: 'food',
           description: 'What food do you like?'
-        }
+        },
       ]
     });
   }

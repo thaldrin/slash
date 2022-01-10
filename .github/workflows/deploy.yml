@@ -22,7 +22,9 @@ jobs:
           VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
           ALIAS_DOMAINS: |
             bot.thaldr.in
+            slash.thaldr.in
             bot.thaldrin.vercel.app
+            slash.thaldrin.vercel.app
             {BRANCH}-{SHA}.bot.thaldr.in
             {BRANCH}-{SHA}.bot.thaldrin.vercel.app
-          PR_PREVIEW_DOMAIN: '{REPO}-{PR}.bot.thaldrin.vercel.app'
+          PR_PREVIEW_DOMAIN: '{REPO}-{PR}.beta.slash.thaldrin.vercel.app'
