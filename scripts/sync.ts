@@ -17,4 +17,5 @@ creator.once('synced', () => {
   process.exit(0);
 });
 
-creator.registerCommandsIn(path.join(__dirname, '..', 'commands')).syncCommands();
+
+  creator.registerCommandsIn(path.join(__dirname, '..', 'commands')).syncCommands();
