@@ -9,7 +9,7 @@ export default class HelloCommand extends SlashCommand {
       options: [
         {
           type: CommandOptionType.STRING,
-          name: 'Link',
+          name: 'link',
           description: 'Link to the Image you want the Source for.',
         },
       ]
@@ -17,6 +17,6 @@ export default class HelloCommand extends SlashCommand {
   }
 
   async run(ctx: CommandContext) {
-    return ctx.options.Link
+    return ctx.options.link
   }
 }
