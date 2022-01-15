@@ -12,6 +12,7 @@ export default class HelloCommand extends SlashCommand {
   async run(ctx: CommandContext) {
     // @ts-ignore
     console.log(sourcefinder.find(ctx.targetMessage.content))
-    return ctx.targetMessage
+    // @ts-ignore
+    return `${sourcefinder.find(ctx.targetMessage.content || "Empty")}`
   }
 }
