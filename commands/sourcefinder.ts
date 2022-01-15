@@ -1,22 +1,17 @@
-import { SlashCommand, CommandOptionType, SlashCreator, CommandContext } from 'slash-create';
-
+import { SlashCommand, CommandOptionType, SlashCreator, CommandContext, ApplicationCommandType } from 'slash-create';
+import sourcefinder from '../utils/sourcefinder';
 export default class HelloCommand extends SlashCommand {
   constructor(creator: SlashCreator) {
     super(creator, {
-      name: 'sourcefinder',
-      description: 'Says hello to you.',
-      // guildIDs: ['828978320279863306'],
-      options: [
-        {
-          type: CommandOptionType.STRING,
-          name: 'link',
-          description: 'Link to the Image you want the Source for.',
-        },
-      ]
+      name: 'Find Image Source',
+      type: ApplicationCommandType.MESSAGE,
+      guildIDs: ['828978320279863306']
     });
   }
 
   async run(ctx: CommandContext) {
-    return ctx.options.link
+    // @ts-ignore
+    console.log(sourcefinder.find(ctx.targetMessage.content))
+    return ctx.targetMessage
   }
 }
