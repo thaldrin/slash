@@ -12,8 +12,8 @@ export default class HelloCommand extends SlashCommand {
   async run(ctx: CommandContext) {
     console.log("Looking for image source...")
     // @ts-ignore
-    console.log(sourcefinder.find(ctx.targetMessage.content))
+    console.log(await sourcefinder.find(ctx.targetMessage.content))
     // @ts-ignore
-    return `${sourcefinder.find(ctx.targetMessage.content) || "Empty"}`
+    return `${await sourcefinder.find(ctx.targetMessage.content) || "Empty"}`
   }
 }
