@@ -1,5 +1,5 @@
 export default {
     name: "Thaldrin Slash",
     creator: "@himbolion kji.tf",
-    version: (await import("../package.json")).version
+    version: `5.0.0`
 }
