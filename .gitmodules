@@ -1,0 +1,3 @@
+[submodule "src/modules/modulus"]
+	path = src/modules/modulus
+	url = git@github.com:thaldrin/modulus.git
