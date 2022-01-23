@@ -18,4 +18,4 @@ creator.once('synced', () => {
 });
 
 
-  creator.registerCommandsIn(path.join(__dirname, '..', 'commands')).syncCommands();
+creator.registerCommandsIn(path.join(__dirname, '..', 'slashcommands')).syncCommands();
