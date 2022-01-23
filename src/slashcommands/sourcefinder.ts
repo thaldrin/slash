@@ -1,7 +1,7 @@
 import { SlashCommand, CommandOptionType, SlashCreator, CommandContext, ApplicationCommandType } from 'slash-create';
 import Logger from '../utils/log';
 import sourcefinder from '../utils/sourcefinder';
-export default class HelloCommand extends SlashCommand {
+export default class SourcefinderCommand extends SlashCommand {
   constructor(creator: SlashCreator) {
     super(creator, {
       name: 'Find Image Source',
@@ -9,6 +9,7 @@ export default class HelloCommand extends SlashCommand {
       guildIDs: ['828978320279863306'],
       deferEphemeral: true,
     });
+    this.filePath = __filename;
   }
 
   async run(ctx: CommandContext) {
@@ -24,7 +25,7 @@ export default class HelloCommand extends SlashCommand {
     } catch (error) {
       Logger.error(error as any);
       // @ts-ignore
-      return ctx.send(`Error: ${error.message}`)
+      return ctx.send(`Error [SOURCEFINDER]: ${error.message}`)
     }
 
   }
